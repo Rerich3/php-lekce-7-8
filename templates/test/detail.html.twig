@@ -11,13 +11,19 @@
     <div class="example-wrapper">
         <h1>Hello! ✅</h1>
 
+        <a href="{{ path('test') }}">Index</a>
+        <a href="{{ path('detail') }}">Detail</a>
+        <a href="{{ path('hello', {'name': 'Master'}) }}">master</a>
+<a href="{{ path('hello', {'name': 'slave'}) }}">slave</a>
         This friendly message is coming from:
-
+<ul>
             <li><b>Username:</b>{{ username }}</li>
         <li><b>Password:</b>{{ password }}</li>
         <li><b>Name:</b>{{ name }}</li>
         <li><b>age:</b>{{ age }}</li>
-
-
+</ul>
+<a href="{{ path('hello', {'name': 'x'}) }}">
+Odkaz na Hello
+</a>
     </div>
 {% endblock %}
