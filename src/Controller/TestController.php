@@ -16,7 +16,20 @@ class TestController extends AbstractController
             'controller_name' => 'TestController',
         ]);
     }
+    /**
+     * @Route("/test/detail", name="detail")
+     */
+    public function detail()
+    {
+        return $this->render('test/detail.html.twig', [
+            'username' => 'andrejmaly',
+            'password' => 'velicesložitéheslo',
+            'name' => 'Andrej Malý',
+            'age' => '20',
 
+
+        ]);
+    }
 
     /**
      * @Route("/test/{name}", name="hello")
