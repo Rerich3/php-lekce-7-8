@@ -7,6 +7,12 @@
     </head>
     <body>
         {% block body %}{% endblock %}
+        <a href="{{ path('test') }}">Index</a>
+        <a href="{{ path('detail') }}">Detail</a>
+        <a href="{{ path('hello', {'name': 'Master'}) }}">master</a>
+        <a href="{{ path('hello', {'name': 'slave'}) }}">slave</a>
+        <br>
+
         {% block javascripts %}{% endblock %}
     </body>
 </html>
